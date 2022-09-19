@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+:root {
+    --primary-clr-green: hsl(158, 36%, 37%);
+    --primary-clr-cream: hsl(30, 38%, 92%);
+
+    --neutral-clr-db: hsl(212, 21%, 14%);
+    --neutral-clr-gb: hsl(228, 12%, 48%);
+    --neutral-clr-wh: hsl(0, 0%, 100%);
+
+    --fs-body: 0.75rem;
+    --fs-heading: 1.75rem;
+    --fs-aside: 0.6rem;
+
+    --ff-heading:'Fraunces', serif;
+    --ff-body: 'Montserrat', sans-serif;
+
+    --fw-500: 500;
+    --fw-700: 700;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-clr-cream);
+    height: 100vh;
+    padding-inline: 1rem;
+}
+
+.card {
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--neutral-clr-wh);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.right-col h1{
+    color: var(--neutral-clr-db);
+    padding-block-start: .5rem;
+}
+
+.right-col h1, 
+.reduced-price {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-700);
+}
+
+#perfume {
+    text-transform: uppercase;
+    font-family: var(--ff-body);
+    color: var(--neutral-clr-gb);
+    font-size: var(--fs-aside);
+    letter-spacing: 0.3em;
+    
+}
+
+.reduced-price {
+    color: var(--primary-clr-green);
+    margin-inline-end: 1rem;
+}
+
+.striked-price {
+    text-decoration:line-through;
+    font-size: var(--fs-body);
+    color: var(--neutral-clr-gb);
+    font-family: var(--ff-body);
+}
+
+.right-col p {
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+    color: var(--neutral-clr-gb);
+    padding-block-start: .75rem;
+    line-height: 1.5em;
+    max-width: 40ch;
+}
+
+button {
+    font-family: var(--ff-body);
+    font-size: var(--fs-aside);
+    font-weight: var(--fw-700);
+    width: 100%;
+    border: none;
+    padding: .7rem;
+    background-color: var(--primary-clr-green);
+    color: var(--neutral-clr-wh);
+    border-radius: 6px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#cart {
+    height: auto;
+    width: 12px;
+    margin-inline-end: 1em;
+}
+
+#prices {
+    padding-block: .75rem;
+    align-items: center;
+    display: flex;
+}
+
+
+.img-col {
+    max-width: 100%;
+}
+
+.right-col {
+    padding-inline: 1.125rem;
+    padding-block-start: 0.6rem;
+    padding-block-end: 1.25rem;
+    
+}
+
+#mobile-img{
+    height: auto;
+    max-width: 100%;
+}
+
+#desktop-img{
+    display: none;
+}
+
+
+
+
+
+
+@media all and (min-width: 525px){
+    .card {
+        flex-direction: row;
+    }
+    #mobile-img{
+        display: none;
+    }
+  
+    #desktop-img{
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .right-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-block: 1rem;
+        padding-inline: 1.5rem;
+    }
+}
